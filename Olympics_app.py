@@ -54,12 +54,12 @@ st.set_page_config(page_title="🏅 Olympics Dashboard", page_icon="🥇", layou
 def load_data(events_path=None, regions_path=None):
     try:
         if events_path is None:
-            events_path = r"C:\Users\Hp\Downloads\athlete_events.csv\athlete_events.csv"
+            events_path = r"C:\Users\Hp\Desktop\Olympics_analysis\athlete_events.csv\athlete_events.csv"
         df = pd.read_csv(events_path)
         region_df = None
         if regions_path is None:
             try:
-                regions_path = r"C:\Users\Hp\Downloads\noc_regions.csv"
+                regions_path = r"noc_regions.csv"
                 region_df = pd.read_csv(regions_path)
             except Exception:
                 region_df = None
