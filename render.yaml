@@ -1,0 +1,70 @@
+services:
+  - type: web
+    name: olympics-analysis-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run app.py --server.port $PORT --server.address 0.0.0.0"
+    plan: free
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: STREAMLIT_SERVER_HEADLESS
+        value: "true"
+      - key: STREAMLIT_SERVER_ENABLE_CORS
+        value: "false"
+      - key: STREAMLIT_SERVER_ENABLE_WEBSOCKET_COMPRESSION
+        value: "false"  
+      - key: STREAMLIT_SERVER_RUN_ON_SAVE
+        value: "true"
+      - key: STREAMLIT_SERVER_MAX_UPLOAD_SIZE
+        value: "100"
+      - key: STREAMLIT_SERVER_MAX_MESSAGE_SIZE
+
+        value: "100"
+      - key: STREAMLIT_CLIENT_CACHING
+        value: "true"
+      - key: STREAMLIT_THEME_BASE
+        value: "dark"
+      - key: STREAMLIT_THEME_PRIMARY_COLOR
+        value: "#1f77b4"
+      - key: STREAMLIT_THEME_BACKGROUND_COLOR
+        value: "#0e1117"
+      - key: STREAMLIT_THEME_SECONDARY_BACKGROUND_COLOR
+        value: "#262730"
+      - key: STREAMLIT_THEME_TEXT_COLOR
+        value: "#fafafa"
+      - key: STREAMLIT_THEME_FONT
+        value: "sans serif"
+      - key: STREAMLIT_THEME_FONT_SIZE  
+        value: "16px"
+      - key: STREAMLIT_THEME_BORDER_RADIUS  
+        value: "4px"
+      - key: STREAMLIT_THEME_COMPONENT_SPACING
+        value: "10px"
+      - key: STREAMLIT_THEME_BUTTON_COLOR
+        value: "#1f77b4"
+      - key: STREAMLIT_THEME_BUTTON_HOVER_COLOR
+
+        value: "#155d8b"
+      - key: STREAMLIT_THEME_BUTTON_TEXT_COLOR
+        value: "#ffffff"
+      - key: STREAMLIT_THEME_BUTTON_BORDER_RADIUS
+        value: "4px"
+      - key: STREAMLIT_THEME_BUTTON_BORDER_WIDTH  
+        value: "1px"
+      - key: STREAMLIT_THEME_BUTTON_BORDER_COLOR
+        value: "#1f77b4"
+      - key: STREAMLIT_THEME_BUTTON_FONT_SIZE
+        value: "16px"
+      - key: STREAMLIT_THEME_BUTTON_FONT_WEIGHT
+        value: "bold"
+      - key: STREAMLIT_THEME_BUTTON_PADDING
+        value: "10px 20px"
+      - key: STREAMLIT_THEME_BUTTON_MARGIN
+        value: "10px"
+      - key: STREAMLIT_THEME_BUTTON_SHADOW
+        value: "0px 4px 6px rgba(0, 0, 0, 0.1)"
+      - key: STREAMLIT_THEME_BUTTON_TRANSITION
+        value: "all 0.3s ease"
+      - key: STREAMLIT_THEME_BUTTON_CURSOR
+        value: "pointer"
