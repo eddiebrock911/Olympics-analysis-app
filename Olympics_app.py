@@ -54,7 +54,7 @@ st.set_page_config(page_title="🏅 Olympics Dashboard", page_icon="🥇", layou
 def load_data(events_path=None, regions_path=None):
     try:
         if events_path is None:
-            events_path = r"C:\Users\Hp\Desktop\Olympics_analysis\athlete_events.csv\athlete_events.csv"
+            events_path = r"athlete_events.csv"
         df = pd.read_csv(events_path)
         region_df = None
         if regions_path is None:
