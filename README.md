@@ -148,9 +148,11 @@ Educational और personal project usage के लिए free है। Commer
 
 ## 👨‍💻 Developer
 
-**Ankit Kumar**
+**Ankit Kumar** (Instagram)[https://www.instagram.com/__ankit._.op_/]
+
 Python | Data Analysis | Machine Learning
 
 ---
 
 ✅ यह README.md आपकी GitHub repository के लिए पूरी तरह ready है। Direct paste करके use करें।
+
